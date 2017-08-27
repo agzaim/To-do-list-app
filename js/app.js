@@ -108,6 +108,25 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    
+    //adding event to list's categories from side panel
+    document.addEventListener("click", function(event) {
+        
+        // hiding tasks list
+        if (event.target.className === "taskCategory") {
+            console.log(event.target);
+            event.target.classList.add("clicked");
+//            event.target.style.opacity = "1"; 
+            var clickedCategory = event.target.firstElementChild.dataset.category;
+            
+            document.getElementById(clickedCategory).style.display = "block";
+            
+        }
+//         event.target.parentNode.style.addClass = "cli";
+            event.target.classList.remove("clicked");
+
+        
+    }); 
 
 
 

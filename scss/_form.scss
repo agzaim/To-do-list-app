@@ -8,17 +8,6 @@ form {
     width: 200px;
     margin: 0 auto;
 //    display: inline-block;
-    button {
-        width: 200px;
-        height: 36px;
-        background-color: #ed7899;
-        border: 1px solid #ed7899;
-        border-radius: 0 0 5px 5px;
-        font-family: "Montserrat", sans-serif;
-        font-weight: bold;
-        font-size: 1rem;
-        letter-spacing: 1.5px;
-    }
 }
 
 
@@ -26,12 +15,14 @@ input {
     width: 200px;
     height: 36px;
     border: 1px solid darkgrey;
-    border-bottom: 0;
     font-family: "Montserrat", sans-serif;
     font-size: 0.9rem;
     padding-left: 8px;
     &:first-child {
          border-radius: 5px 5px 0 0;
+    }
+    &:last-child {
+        border-radius: 0 0 5px 5px;
     }
 }
 

@@ -1,0 +1,30 @@
+aside button {
+    color: #222;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+    background-color: #ffbc2e;
+    background-image: linear-gradient(to bottom, #ffcd34, #ffa426);
+    background-repeat: repeat-x;
+    border: 1px solid;
+    border-color: #ffa426 #ffa426 #d87e00;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 9px 9px;
+}
+
+
+form button {
+        width: 200px;
+        height: 36px;
+        background-color: #5a95e5;
+    border: none;
+    box-shadow: none;
+        border-bottom: 2px solid #216cd1;
+        border-radius: 5px;
+    margin-top: 10px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-size: 1rem;
+    color: #fff;
+        letter-spacing: 1.5px;
+}

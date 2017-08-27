@@ -5,23 +5,32 @@
 */
 
 aside {
-    width: 200px;
-//    display: inline-block;
+    width: 230px;
     position: absolute;
+    border: 1px solid darkgrey;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-left: 15px;
+    padding: 15px;
+    box-shadow: 3px 4px 10px #c2c2a3;
 }
 
 
 aside ul {
     list-style: none;
-    margin-left: 15px;
 }
 
 
 aside li {
     margin-bottom: 5px;
+    border-bottom: 1px solid darkgrey;
+    &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
     span {
         vertical-align: middle;
-        margin-left: 20px;
+        margin-left: 15px;
     }
 }
 
@@ -39,41 +48,47 @@ aside li {
 }
 
 
-[data-category="book"]  {
+[data-category="booksList"]  {
     background-image: url(../images/icons8-Book%20Shelf-64.png);
 }
 
 
-[data-category="movie"]  {
+[data-category="moviesList"]  {
     background-image: url(../images/icons8-Movie%20Projector-64.png);
 }
 
 
-[data-category="personal"]  {
+[data-category="personalTasks"]  {
     background-image: url(../images/icons8-Home-64.png);
 }
 
 
-[data-category="work"]  {
+[data-category="workTasks"]  {
     background-image: url(../images/icons8-Briefcase-64.png);
 }
 
 
-[data-category="idea"]  {
+[data-category="ideasList"]  {
     background-image: url(../images/icons8-Idea-64.png);
 }
 
 
-[data-category="shopping"]  {
+[data-category="groceriesList"]  {
     background-image: url(../images/icons8-Shopping%20Cart-64.png);
 }
 
 
-[data-category="plus"]  {
-    background-image: url(../images/icons8-Plus%20Math-64.png);
-}
+//[data-category="plus"]  {
+//    background-image: url(../images/icons8-Plus%20Math-64.png);
+//}
 
 
 [data-category="star"]  {
     background-image: url(../images/icons8-Star-50.png);
+}
+
+
+.clicked {
+    opacity: 1;
+    background-color: aqua;
 }

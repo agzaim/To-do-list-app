@@ -25,27 +25,26 @@
             </div>
         </header>
             <aside>
-                <button id="removeFinishedTasksButton">Remove finished tasks</button>
+                
                 <ul>
-                    <li><div class="icon" data-category="work"></div>
+                    <li class="taskCategory"><div class="icon" data-category="workTasks"></div>
                         <span>Work Tasks</span></li>
-                    <li><div class="icon" data-category="personal"></div>
+                    <li class="taskCategory"><div class="icon" data-category="personalTasks"></div>
                         <span>Personal Tasks</span></li>
-                    <li><div class="icon" data-category="shopping"></div>
+                    <li class="taskCategory"><div class="icon" data-category="groceriesList"></div>
                         <span>To buy</span></li>
-                    <li><div class="icon" data-category="movie"></div>
+                    <li class="taskCategory"><div class="icon" data-category="moviesList"></div>
                         <span>To watch</span></li>
-                    <li><div class="icon" data-category="book"></div>
+                    <li class="taskCategory"><div class="icon" data-category="booksList"></div>
                         <span>To read</span></li>
-                    <li><div class="icon" data-category="idea"></div>
+                    <li class="taskCategory"><div class="icon" data-category="ideasList"></div>
                         <span>Ideas</span></li>
-                    <li><div class="icon" data-category="plus"></div>
-                        <span>Add category</span></li>
                 </ul>
+                <button id="removeFinishedTasksButton">Remove finished tasks</button>
+                <button id="addCategoryButton">Add new category</button>
             </aside>
             <form>
                 <input id="taskInput" placeholder="Task name"><br>
-                <input id="priorityInput" placeholder="Task priority [1-5]"><br>
                 <input id="categoryInput" list="tasksCategories" name="category" placeholder="Select category">
                 <datalist id="tasksCategories">
                     <option value="Work Tasks" data-id="workTasks">
@@ -55,6 +54,7 @@
                     <option value="To read" data-id="booksList">
                     <option value="Ideas" data-id="ideasList">
                 </datalist><br>
+                <input id="priorityInput" placeholder="Task priority [1-5]"><br>
                 <button id="addTaskButton">ADD</button>
             </form>
 
