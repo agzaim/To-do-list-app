@@ -1,0 +1,98 @@
+
+/*  
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+--------------------HEADER----------------------
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& 
+*/
+
+
+/*
+#05668D
+#A27AA1
+
+#25283d
+#8f3985
+
+#db2b39
+#29335c
+
+#313715
+#d16014
+
+#102542
+#f87060
+
+#004777
+#a30000
+
+#266dd3
+#344055
+
+#be8a60
+#6a2e35
+*/
+
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #25283d;
+    color: #FFF;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 5px #c2c2a3;
+    h1 {
+        margin-top: 20px;    
+        text-align: center;
+        font-weight: 300;
+        font-size: 44px;
+        font-family: 'Alfa Slab One', cursive;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px #404040;
+        span {
+            color: #d16014;
+            font-family: 'Alfa Slab One', cursive;
+            letter-spacing: 2px;
+        }
+    }
+    p {
+        font-size: 0.6rem;
+        float: right;
+        margin-right: 13px;
+        margin-top: 65px;
+        letter-spacing: 0.7px;
+    }
+    a {
+        text-decoration: none;
+        color: #FFF;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.headerPiece {
+    width: 33.3%;
+    height: 100px;
+    display: inline-block;
+    float: left;
+}
+
+
+@media (min-width: 1824px) {
+    header {
+        height: 130px;
+        h1 {
+            margin-top: 30px;
+            font-size: 50px;
+        }
+        p {
+            font-size: 12px;
+            margin-top: 82px;
+        }
+    }
+    .headerPiece {
+        height: 130px;
+
+    }
+}

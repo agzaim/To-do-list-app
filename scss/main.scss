@@ -1,2 +1,18 @@
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+
 @import "reset";
+@import "header";
+@import "sidePanel";
 @import "form";
+@import "taskList";
+
+
+
+.background {
+    background-image: url("../images/ecailles.png");
+    width: 100vw;
+    height: 100vh;
+}

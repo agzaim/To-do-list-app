@@ -1,42 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>To-do-list</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/app.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>To-do-list</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/app.js"></script>
+    </head>
+    <body>
+        <div class="background">
+            <header>
+            <div class="headerPiece"></div>
+            <div class="headerPiece">
+                <h1>Flash <span>brain</span></h1>
+            </div>
+            <div class="headerPiece">
+                <p>
+                    &copy; 2017 by agzaim <br> 
+                    <a href="https://github.com/agzaim" target="_blank">http:/github.com/agzaim</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </header>
+            <aside>
+                <button id="removeFinishedTasksButton">Remove finished tasks</button>
+                <ul>
+                    <li><div class="icon" data-category="work"></div>
+                        <span>Work Tasks</span></li>
+                    <li><div class="icon" data-category="personal"></div>
+                        <span>Personal Tasks</span></li>
+                    <li><div class="icon" data-category="shopping"></div>
+                        <span>To buy</span></li>
+                    <li><div class="icon" data-category="movie"></div>
+                        <span>To watch</span></li>
+                    <li><div class="icon" data-category="book"></div>
+                        <span>To read</span></li>
+                    <li><div class="icon" data-category="idea"></div>
+                        <span>Ideas</span></li>
+                    <li><div class="icon" data-category="plus"></div>
+                        <span>Add category</span></li>
+                </ul>
+            </aside>
+            <form>
+                <input id="taskInput" placeholder="Task name"><br>
+                <input id="priorityInput" placeholder="Task priority [1-5]"><br>
+                <input id="categoryInput" list="tasksCategories" name="category" placeholder="Select category">
+                <datalist id="tasksCategories">
+                    <option value="Work Tasks" data-id="workTasks">
+                    <option value="Personal Tasks" data-id="personalTasks">
+                    <option value="To buy" data-id="groceriesList">
+                    <option value="To watch" data-id="moviesList">
+                    <option value="To read" data-id="booksList">
+                    <option value="Ideas" data-id="ideasList">
+                </datalist><br>
+                <button id="addTaskButton">ADD</button>
+            </form>
 
-<form>
-<input id="taskInput" placeholder="Task name"><br>
-<input id="priorityInput" placeholder="Task priority"><br>
-<input list="tasksCategories" name="category" placeholder="Select category">
-  <datalist id="tasksCategories">
-    <option value="Work">
-    <option value="Personal">
-    <option value="To buy">
-    <option value="To watch">
-    <option value="To read">
-  </datalist><br>
-<button id="addTaskButton">Add task</button>
-</form>
+            <div class="listsBox">
+                <ul class="taskList" id="workTasks">
+                </ul>
+                <ul class="taskList" id="personalTasks">
+                </ul> 
+                <ul class="taskList" id="groceriesList">
+                </ul>
+                <ul class="taskList" id="booksList">
+                </ul>
+                <ul class="taskList" id="moviesList">
+                </ul>
+                <ul class="taskList" id="ideasList">
+                </ul>
+            </div>
+        </div>
 
-<ul id="taskList">
-    <!--<li>
-        <h1>Task 1</h1>
-        <button>Delete</button>
-        <button>Complete</button>
-    </li>
-    <li class="done">
-        <h1>Task 2</h1>
-        <button>Delete</button>
-        <button>Complete</button>
-    </li>-->
-</ul>
 
-<button id="removeFinishedTasksButton">Remove finished tasks</button>
 
-</body>
+        <!--                <div id="test" data-activity="book"></div>-->
+    </body>
 </html>
