@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var addingButton = document.getElementById("addTaskButton");
     var taskInput = document.getElementById("taskInput");
     var priorityInput = document.getElementById("priorityInput");
-    var taskList = document.getElementsByClassName("taskList");
+    var taskLists = document.getElementsByClassName("taskList");
     var categoryInput = document.getElementById("categoryInput");
     var optionsList = document.getElementsByTagName("option");
     var removingFinishedTasksButton = document.getElementById("removeFinishedTasksButton");
@@ -15,7 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-    // adding event to "Add" button
+    // **********************************************************
+    // adding event to ADD BUTTON
+    // **********************************************************
+
     addingButton.addEventListener("click", function(event) {
         event.preventDefault();
         var task = taskInput.value;
@@ -31,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
-        for (var i = 0; i< taskList.length; i++) {
-            if (taskList[i].id == optionDataset) {
+        for (var i = 0; i< taskLists.length; i++) {
+            if (taskLists[i].id == optionDataset) {
                 var currentTasksList = document.getElementById(optionDataset);
             }
         }
@@ -64,7 +67,15 @@ document.addEventListener("DOMContentLoaded", function() {
             listElement.lastElementChild.firstElementChild.addEventListener("click", deletingTask);
             //            listElement.lastElementChild.addEventListener("click", completingTask);   
 
-            
+
+            // hiding visible list and showing list with cuurent category
+            for (var i = 0; i < taskLists.length; i++) {
+                taskLists[i].style.display = "none";
+            }
+
+            currentTasksList.style.display = "block";
+
+
             addingElement(priorityValue, listElement, currentTasksList);
         }        
     });
@@ -83,7 +94,11 @@ document.addEventListener("DOMContentLoaded", function() {
         counter();
     }
 
-// adding task to the correct place in a correct list
+
+    // **********************************************************
+    // ADDING TASK to the correct place in a correct list
+    // **********************************************************
+
     function addingElement(priorityVar, element, taskList) {
 
         if (taskList.children.length === 0 || (taskList.children.length === 1 && priorityVar > taskList.children[0].dataset.priority))  {
@@ -108,24 +123,31 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    
-    //adding event to list's categories from side panel
+
+    // **********************************************************
+    // adding event to LIST'S CATEGORIES from side panel
+    // **********************************************************
+
     document.addEventListener("click", function(event) {
-        
-        // hiding tasks list
-        if (event.target.className === "taskCategory") {
-            console.log(event.target);
-            event.target.classList.add("clicked");
-//            event.target.style.opacity = "1"; 
-            var clickedCategory = event.target.firstElementChild.dataset.category;
-            
-            document.getElementById(clickedCategory).style.display = "block";
-            
-        }
-//         event.target.parentNode.style.addClass = "cli";
-            event.target.classList.remove("clicked");
+        var categoryBox = 0;
 
         
+        if (event.target.parentNode.className === "taskCategory" || event.target.className === "taskCategory") {
+
+            (event.target.className === "taskCategory") ? categoryBox = event.target : categoryBox = event.target.parentNode; 
+
+
+            var clickedCategory = categoryBox.firstElementChild.dataset.category;
+
+
+            // hiding visible task list and showing list with clicked category
+            for (var i = 0; i < taskLists.length; i++) {
+                taskLists[i].style.display = "none";
+            }
+
+            document.getElementById(clickedCategory).style.display = "block";
+
+        }
     }); 
 
 
@@ -133,15 +155,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-        //dodaję event do guzika "Remove finished tasks"
-        /*removingFinishedTasksButton.addEventListener("click", function(event) {
+    //dodaję event do guzika "Remove finished tasks"
+    /*removingFinishedTasksButton.addEventListener("click", function(event) {
         for (var i = taskList.children.length - 1; i >= 0; i--) {
             if (taskList.children[i].className === "taskDone") {
                 taskList.removeChild(taskList.children[i]);
             }
         }
     });*/
-    });
+});
 
 
 

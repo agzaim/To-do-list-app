@@ -138,6 +138,12 @@ aside li:hover {
   cursor: pointer;
 }
 
+/* %%%%%%%%%%  dodane %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+aside li:active {
+  opacity: 1;
+  background-color: cornsilk;
+}
+
 aside li span {
   vertical-align: middle;
   margin-left: 15px;
@@ -225,8 +231,11 @@ input:last-child {
   margin-top: 30px;
 }
 
+/* %%%%%%%%%%  dodane %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
 .listsBox ul {
   list-style: none;
+    display: none;
 }
 
 .listsBox li {
