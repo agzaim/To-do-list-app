@@ -1,9 +1,9 @@
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1210px) {
     /*  body {
     font-size: 13px;
 }*/
 
-    #burgerMenuIcon {
+   /* #burgerMenuIcon {
         background: url(../images/icons8-Menu%20Filled-50.png) no-repeat;
         background-size: contain;
         float: left;
@@ -14,40 +14,40 @@
         top: 84px;
         right: 13px;
     }
-
+*/
 
     header {
         //        height: 
         p {
-            display: none;
+//            display: none;
         }
 
     }
 
     
     form {
-        width: 95%;
+        width: 30%;
     }
 
 
     aside {
-        width: 95%;
-        position: static;
-        margin: 0 auto;
-        display: none;
+        width: 28%;
+//        position: static;
+//        margin: 0 auto;
+//        display: none;
         li {
-            padding-left: 30px;
+//            padding-left: 30px;
         }
     }
 
-    aside.open {
+   /* aside.open {
         display: block;
-    }
+    }*/
 
 
 
     .listsBox {
-        width: 95%;
+        width: 35%;
     }
 }
 

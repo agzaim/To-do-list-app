@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var categoryInput = document.getElementById("categoryInput");
     var optionsList = document.getElementsByTagName("option");
     var removingFinishedTasksButton = document.getElementById("removeFinishedTasksButton");
+    var categoriesSection = document.getElementsByTagName("aside");
+    var mobileBurgerMenu = document.getElementById("burgerMenuIcon");
     /*var workTasksList = document.getElementById("workTasks");
     var personalTasksList = document.getElementById("personalTasks");
     var groceriesList = document.getElementById("groceriesList");
@@ -151,7 +153,10 @@ document.addEventListener("DOMContentLoaded", function() {
     }); 
 
 
-
+mobileBurgerMenu.addEventListener("click", function() {
+    categoriesSection[0].classList.toggle("open");
+});
+    
 
 
 

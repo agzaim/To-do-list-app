@@ -1,0 +1,47 @@
+@media screen and (max-width: 750px) {
+    /*  body {
+    font-size: 13px;
+}*/
+
+
+    header {
+        //        height: 
+        p {
+//            display: none;
+        }
+
+    }
+
+    
+    form {
+        width: 50%;
+        float: right;
+        margin-right: 13px;
+    }
+
+
+    aside {
+        width: 35%;
+        position: static;
+        float: left;
+//        margin: 0 auto;
+//        display: none;
+        li span {
+            margin-left: 7px;
+        }
+    }
+
+   /* aside.open {
+        display: block;
+    }*/
+
+
+
+    .listsBox {
+        width: 55%;
+        float: right;
+        margin-right: 10px;
+    }
+}
+
+
