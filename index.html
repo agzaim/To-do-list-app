@@ -12,20 +12,27 @@
     <body>
         <div class="background">
             <header>
-            <div class="headerPiece"></div>
-            <div class="headerPiece">
-                <h1>Flash <span>brain</span></h1>
-            </div>
-            <div class="headerPiece">
-                <p>
-                    &copy; 2017 by agzaim <br> 
-                    <a href="https://github.com/agzaim" target="_blank">http:/github.com/agzaim</a>
-                </p>
-                <div class="clearfix"></div>
-            </div>
-        </header>
+                <div class="burgerMenuIcon"></div>
+                    <h1>Flash <span>brain</span></h1>
+                    <p>
+                        &copy; 2017 by agzaim <br> 
+                        <a href="https://github.com/agzaim" target="_blank">http:/github.com/agzaim</a>
+                    </p>
+                    <div class="clearfix"></div>
+               
+                <!--<div class="headerPiece"></div>
+                <div class="headerPiece">
+                    <h1>Flash <span>brain</span></h1>
+                </div>
+                <div class="headerPiece">
+                    <p>
+                        &copy; 2017 by agzaim <br> 
+                        <a href="https://github.com/agzaim" target="_blank">http:/github.com/agzaim</a>
+                    </p>
+                    <div class="clearfix"></div>
+                </div>-->
+            </header>
             <aside>
-                
                 <ul>
                     <li class="taskCategory"><div class="icon" data-category="workTasks"></div>
                         <span>Work Tasks</span></li>
@@ -43,20 +50,23 @@
                 <button id="removeFinishedTasksButton">Remove finished tasks</button>
                 <button id="addCategoryButton">Add new category</button>
             </aside>
-            <form>
-                <input id="taskInput" placeholder="Task name"><br>
-                <input id="categoryInput" list="tasksCategories" name="category" placeholder="Select category">
-                <datalist id="tasksCategories">
-                    <option value="Work Tasks" data-id="workTasks">
-                    <option value="Personal Tasks" data-id="personalTasks">
-                    <option value="To buy" data-id="groceriesList">
-                    <option value="To watch" data-id="moviesList">
-                    <option value="To read" data-id="booksList">
-                    <option value="Ideas" data-id="ideasList">
-                </datalist><br>
-                <input id="priorityInput" placeholder="Task priority [1-5]"><br>
-                <button id="addTaskButton">ADD</button>
-            </form>
+            <section class="formSection">
+<!--                <a class="burgerDropDown">DUPA DUOA</a>-->
+                <form>
+                    <input id="taskInput" placeholder="Task name"><br>
+                    <input id="categoryInput" list="tasksCategories" name="category" placeholder="Select category">
+                    <datalist id="tasksCategories">
+                        <option value="Work Tasks" data-id="workTasks">
+                        <option value="Personal Tasks" data-id="personalTasks">
+                        <option value="To buy" data-id="groceriesList">
+                        <option value="To watch" data-id="moviesList">
+                        <option value="To read" data-id="booksList">
+                        <option value="Ideas" data-id="ideasList">
+                    </datalist><br>
+                    <input id="priorityInput" placeholder="Task priority [1-5]"><br>
+                    <button id="addTaskButton">ADD</button>
+                </form>
+            </section>
 
             <div class="listsBox">
                 <ul class="taskList" id="workTasks">

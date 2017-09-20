@@ -10,15 +10,16 @@
     margin-top: 30px;
     ul {
         list-style: none;
+        display: none;
     }
     li {
         width: 300px;
-//        height: 40px;
+        //        height: 40px;
         border: 1px solid darkgrey;
         &:first-child {
             border-radius: 5px 5px 0 0;
         }
-         &:last-child {
+        &:last-child {
             border-radius: 0 0 5px 5px;
         }
         h2 {
@@ -29,21 +30,21 @@
         }
     }
 }
-        
-    .liButtonsBox {
-                        display: none;
-            border: 1px solid darkgrey;
-        text-align: center;
-            button {
-                width: 70px;
-                height: 27px;
-                display: inline-block;
-                margin: 5px;
-                border-radius: 5px;
 
-            }
-        }
-    
+.liButtonsBox {
+    display: none;
+    border: 1px solid darkgrey;
+    text-align: center;
+    button {
+        width: 70px;
+        height: 27px;
+        display: inline-block;
+        margin: 5px;
+        border-radius: 5px;
+
+    }
+}
+
 
 
 

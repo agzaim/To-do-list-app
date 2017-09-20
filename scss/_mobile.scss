@@ -1,0 +1,42 @@
+@media screen and (max-width: 480px) {
+    /*  body {
+    font-size: 13px;
+}*/
+
+    .burgerMenuIcon {
+        background: url(../images/icons8-Menu%20Filled-50.png) no-repeat;
+        background-size: contain;
+        float: left;
+        height: 25px;
+        width: 25px;
+//        margin-top: 20px;
+        position: absolute;
+        top: 40px;
+        right: 7px;
+    }
+
+    
+    aside {
+        width: 95%;
+        position: static;
+        margin: 0 auto;
+        li {
+            padding-left: 30px;
+        }
+    }
+
+
+    section.formSection {
+        display: none;
+    }
+
+    header {
+//        height: 
+    p {
+        display: none;
+    }
+
+
+}
+
+
